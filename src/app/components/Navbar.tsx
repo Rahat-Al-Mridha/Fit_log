@@ -5,7 +5,7 @@ import Image from "next/image";
 const Navbar = () => {
   return (
     <nav className="w-full border-b border-gray-800 bg-[#0c0d10] text-white">
-      <div className="mx-auto flex h-[76px] items-center justify-between px-6">
+      <div className="mx-auto container flex h-[76px] items-center justify-between px-6">
 
         {/* Left: Logo */}
         <div className="flex items-center gap-2">

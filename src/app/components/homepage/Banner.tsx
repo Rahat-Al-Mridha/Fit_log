@@ -5,8 +5,8 @@ import banner from "@/assets/banner.png"
 const Banner = () => {
     return (
 
-        <div className="min-h-screen bg-[#0b0c0f] p-5 text-white">
-            <div className="mx-auto flex min-h-[420px] max-w-7xl flex-col items-center justify-between gap-8 rounded-2xl border border-[#252830] bg-[#15171c] px-8 py-10 md:flex-row md:px-12 lg:px-14">
+        <div className="min-h-screen bg-[#0b0c0f] p-12 text-white">
+            <div className="mx-auto container flex min-h-[420px] flex-col items-center justify-between gap-8 rounded-2xl border border-[#252830] bg-[#15171c] px-8 py-10 md:flex-row md:px-12 lg:px-14">
 
                 {/* Left Content */}
                 <div className="max-w-xl">
