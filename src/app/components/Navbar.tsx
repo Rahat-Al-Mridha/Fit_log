@@ -29,12 +29,13 @@ const Navbar = () => {
               Workouts
             </button>
           </Link>
-
-          <button
-            onClick={() => setAreClicked(!areClicked)}
-            className={`rounded-full px-4 py-2 text-xs font-semibold  ${areClicked ? " bg-lime-400/10 text-lime-400" : "text-gray-400"}`}>
-            My Plan
-          </button>
+          <Link href="/myplan">
+            <button
+              onClick={() => setAreClicked(!areClicked)}
+              className={`rounded-full px-4 py-2 text-xs font-semibold  ${areClicked ? " bg-lime-400/10 text-lime-400" : "text-gray-400"}`}>
+              My Plan
+            </button>
+          </Link>
         </div>
 
         {/* Right: Plan and Saved */}
