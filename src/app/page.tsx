@@ -5,7 +5,7 @@ import Library from './components/homepage/Library';
 
 const page = () => {
   return (
-    <div>
+    <div >
      <Banner></Banner>
      <Library></Library>
     </div>

@@ -1,15 +1,20 @@
-import React from "react";
+'use client'
+import React, { useState } from "react";
 import logo from "@/assets/logo.png"
 import Image from "next/image";
+import Link from "next/link";
 
 const Navbar = () => {
+
+  const [isClicked, setIsClicked] = useState(false);
+  const [areClicked, setAreClicked] = useState(false);
   return (
     <nav className="w-full border-b border-gray-800 bg-[#0c0d10] text-white">
       <div className="mx-auto container flex h-[76px] items-center justify-between px-6">
 
         {/* Left: Logo */}
         <div className="flex items-center gap-2">
-          <Image src={logo} alt="navbar logo"/>
+          <Image src={logo} alt="navbar logo" />
           <h2 className="text-lg font-extrabold tracking-wide">
             FITLOG
           </h2>
@@ -17,11 +22,17 @@ const Navbar = () => {
 
         {/* Center: Navigation */}
         <div className="flex items-center gap-2">
-          <button className="rounded-full bg-lime-400/10 px-4 py-2 text-xs font-semibold text-lime-400">
-            Workouts
-          </button>
+          <Link href="/workouts">
+            <button
+              onClick={() => setIsClicked(!isClicked)}
+              className={`rounded-full px-4 py-2 text-xs font-semibold  ${isClicked ? " bg-lime-400/10 text-lime-400" : "text-gray-400"}`}>
+              Workouts
+            </button>
+          </Link>
 
-          <button className="rounded-full px-4 py-2 text-xs text-gray-400 transition hover:text-white">
+          <button
+            onClick={() => setAreClicked(!areClicked)}
+            className={`rounded-full px-4 py-2 text-xs font-semibold  ${areClicked ? " bg-lime-400/10 text-lime-400" : "text-gray-400"}`}>
             My Plan
           </button>
         </div>
