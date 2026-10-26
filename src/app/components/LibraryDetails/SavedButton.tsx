@@ -3,6 +3,7 @@
 import { LibraryContext } from '@/context/LibraryProvider';
 import { IlibraryCard } from '@/types/libraryCard.type';
 import React, { useContext } from 'react';
+import { toast } from 'react-toastify';
 
 const SavedButton = ({ libraryCard }: { libraryCard: IlibraryCard }) => {
 
@@ -14,7 +15,7 @@ const SavedButton = ({ libraryCard }: { libraryCard: IlibraryCard }) => {
 
         //  setTodaysPlanLibrary((prevTodaysPlanLibrary) =>[...todaysPlanLibrary, libraryCard]);
         setSavedPlanLibrary([...savedLibrary, libraryCard]);
-        alert(`added to Save for later ${libraryCard.name}`)
+        toast.success(`added to Save for later ${libraryCard.name}`)
 
     }
     return (

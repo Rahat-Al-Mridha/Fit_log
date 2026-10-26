@@ -10,7 +10,7 @@ const Navbar = () => {
   const [areClicked, setAreClicked] = useState(false);
   return (
     <nav className="w-full border-b border-gray-800 bg-[#0c0d10] text-white">
-      <div className="mx-auto container flex h-[76px] items-center justify-between px-6">
+      <div className="mx-auto container flex h-[75px] items-center justify-between px-6">
 
         {/* Left: Logo */}
         <div className="flex items-center gap-2">

@@ -3,6 +3,7 @@
 import { LibraryContext } from '@/context/LibraryProvider';
 import { IlibraryCard } from '@/types/libraryCard.type';
 import React, { useContext } from 'react';
+import { toast } from 'react-toastify';
 
 const TodaysPlanButton = ({ libraryCard }: { libraryCard: IlibraryCard }) => {
 
@@ -14,7 +15,7 @@ const TodaysPlanButton = ({ libraryCard }: { libraryCard: IlibraryCard }) => {
 
             //  setTodaysPlanLibrary((prevTodaysPlanLibrary) =>[...todaysPlanLibrary, libraryCard]);
         setTodaysPlanLibrary([...todaysPlanLibrary, libraryCard]);
-        alert(`added to today's plan ${libraryCard.name}`)
+        toast.success(`added to today's plan ${libraryCard.name}`)
 
     }
     return (
