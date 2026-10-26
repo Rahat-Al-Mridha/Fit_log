@@ -1,10 +1,14 @@
 'use client'
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import logo from "@/assets/logo.png"
 import Image from "next/image";
 import Link from "next/link";
+import { LibraryContext } from "@/context/LibraryProvider";
 
 const Navbar = () => {
+    
+        const { todaysPlanLibrary,
+            savedLibrary} = useContext(LibraryContext);
 
   const [isClicked, setIsClicked] = useState(false);
   const [areClicked, setAreClicked] = useState(false);
@@ -44,14 +48,14 @@ const Navbar = () => {
           <div className="flex items-center gap-2">
             <span className="text-gray-300">Plan</span>
             <span className="flex h-5 w-5 items-center justify-center rounded-full bg-lime-400 text-[10px] font-bold text-black">
-              0
+              {todaysPlanLibrary.length}
             </span>
           </div>
 
           <div className="flex items-center gap-2">
             <span className="text-gray-400">Saved</span>
             <span className="flex h-5 w-5 items-center justify-center rounded-full border border-gray-700 text-[10px] text-gray-300">
-              0
+              {savedLibrary.length}
             </span>
           </div>
 

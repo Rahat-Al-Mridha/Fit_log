@@ -68,7 +68,7 @@ const LibraryDetailsPage = async ({
 
     return (
         <main className="min-h-screen bg-[#0d0f13] px-5 py-8 text-white sm:px-8 lg:px-12">
-            <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 md:grid-cols-2 lg:gap-10">
+            <div className="mx-auto grid max-w-[62rem] grid-cols-1 gap-8 md:grid-cols-2 lg:gap-10">
 
                 {/* Exercise Image */}
                 <div className="relative h-[450px] overflow-hidden rounded-xl sm:h-[500px]">
@@ -168,3 +168,24 @@ const LibraryDetailsPage = async ({
 };
 
 export default LibraryDetailsPage;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
