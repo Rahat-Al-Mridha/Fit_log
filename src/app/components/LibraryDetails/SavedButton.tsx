@@ -2,13 +2,15 @@
 
 import { LibraryContext } from '@/context/LibraryProvider';
 import { IlibraryCard } from '@/types/libraryCard.type';
-import React, { useContext } from 'react';
+import React, { Dispatch, SetStateAction, useContext } from 'react';
 import { toast } from 'react-toastify';
+
+
 
 const SavedButton = ({ libraryCard }: { libraryCard: IlibraryCard }) => {
 
     const { savedLibrary,
-        addToSaved ,setSavedLibrary} = useContext(LibraryContext);
+        addToSaved,setSavedLibrary } = useContext(LibraryContext);
 
     const handleSavedButton = () => {
         console.log("todays plan btn")

@@ -32,6 +32,8 @@
 
 import {
     createContext,
+    Dispatch,
+    SetStateAction,
     useCallback,
     useEffect,
     useState,
@@ -46,6 +48,8 @@ type LibraryContextType = {
     addToSaved: (exercise: IlibraryCard) => boolean;
     removeFromTodaysPlan: (exercise: IlibraryCard) => void;
     removeFromSaved: (exercise: IlibraryCard) => void;
+    
+   
 };
 
 export const LibraryContext = createContext<LibraryContextType>({
@@ -55,6 +59,7 @@ export const LibraryContext = createContext<LibraryContextType>({
     addToSaved: () => false,
     removeFromTodaysPlan: () => {},
     removeFromSaved: () => {},
+    
 });
 
 function getKey(exercise: IlibraryCard) {

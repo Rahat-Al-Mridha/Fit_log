@@ -7,7 +7,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <footer className="w-full border-t border-gray-800 bg-[#090a0d]">
-      <div className="container mx-auto max-w-[65rem] flex p-4  min-h-[76px] items-center justify-between px-5 sm:px-8">
+      <div className="container mx-auto mt-4 max-w-[65rem] flex p-4  min-h-[76px] items-center justify-between px-5 sm:px-8">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <Image src={logo} alt="navbar logo"/>
